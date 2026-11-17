@@ -1,0 +1,34 @@
+.account-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: 4px;
+  padding: 0.8rem;
+  background: var(--cor-superficie);
+}
+
+.account-summary__details {
+  display: flex;
+  flex: 1 1 11rem;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.account-summary__details h2,
+.account-summary__details p {
+  margin: 0;
+}
+
+.account-books-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.account-demo-link {
+  font-size: 0.8rem;
+}

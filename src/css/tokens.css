@@ -1,0 +1,11 @@
+:root {
+  --cor-primaria: #ffdbbb;
+  --cor-secundaria: rgb(77, 53, 23);
+  --cor-terciaria: #ed3b2f;
+  --cor-fundo: #fffaf6;
+  --cor-superficie: #ffffff;
+  --cor-borda: #decbb8;
+  --cor-texto-suave: #756653;
+  --cor-sucesso: #476d55;
+  --cor-erro: #a4382e;
+}

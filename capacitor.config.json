@@ -1,0 +1,10 @@
+{
+  "appId": "com.etec.trocalivros",
+  "appName": "Troca de Livros",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  }
+}

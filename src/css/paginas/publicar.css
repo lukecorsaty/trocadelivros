@@ -1,0 +1,28 @@
+.publish-intro {
+  border-left: 3px solid var(--cor-terciaria);
+  padding: 0.45rem 0.65rem;
+  background: var(--cor-primaria);
+  color: var(--cor-secundaria);
+}
+
+.publish-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.publish-form__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.publish-form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.form-feedback--success {
+  color: var(--cor-sucesso);
+}

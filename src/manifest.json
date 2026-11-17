@@ -1,0 +1,16 @@
+{
+  "name": "Troca de Livros",
+  "short_name": "Troca Livros",
+  "start_url": "./",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "img/troca-de-livros.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "background_color": "#fffaf6",
+  "theme_color": "#ffdbbb"
+}

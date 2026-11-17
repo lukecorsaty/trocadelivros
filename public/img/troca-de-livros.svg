@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Troca de Livros</title>
+  <rect x="24" y="24" width="464" height="464" rx="48" fill="#ffdbbb"/>
+  <path d="M100 130h104c29 0 52 23 52 52v214c0-29-23-52-52-52H100z" fill="#fffaf6" stroke="#4d3517" stroke-linejoin="round" stroke-width="20"/>
+  <path d="M412 130H308c-29 0-52 23-52 52v214c0-29 23-52 52-52h104z" fill="#fffaf6" stroke="#4d3517" stroke-linejoin="round" stroke-width="20"/>
+  <path d="M256 182v214" fill="none" stroke="#4d3517" stroke-linecap="round" stroke-width="18"/>
+  <path d="M133 192h77M133 231h77M302 192h77M302 231h77" fill="none" stroke="#4d3517" stroke-linecap="round" stroke-width="14"/>
+  <path d="M366 286h44l-18 32h-26z" fill="#ed3b2f"/>
+</svg>

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Relatório — Troca de Livros</title>
+  <style>
+    @page { size: A4; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #4d3517; font: 9pt/1.35 Arial, Helvetica, sans-serif; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    h1, h2, h3, p { margin: 0; }
+    h1 { font-size: 21pt; line-height: 1.1; }
+    h2 { margin-bottom: 5pt; border-bottom: 1px solid #decbb8; padding-bottom: 3pt; font-size: 13pt; }
+    h3 { margin-bottom: 3pt; font-size: 9.5pt; }
+    p { margin-bottom: 5pt; }
+    .page { position: relative; height: 273mm; overflow: hidden; page-break-after: always; break-after: page; }
+    .page:last-child { page-break-after: auto; break-after: auto; }
+    .coverline { margin-bottom: 6pt; color: #ed3b2f; font-size: 8pt; font-weight: bold; letter-spacing: .08em; text-transform: uppercase; }
+    .subtitle { margin-top: 4pt; color: #756653; font-size: 10pt; }
+    .name-line { margin: 8pt 0 12pt; border: 1px solid #decbb8; padding: 6pt 8pt; background: #fffaf6; }
+    .section { margin-top: 10pt; }
+    .scenarios { display: flex; gap: 7pt; margin: 7pt 0 10pt; }
+    .scenario { flex: 1 1 0; border: 1px solid #decbb8; padding: 7pt; background: #fffaf6; }
+    .scenario p { margin: 0; font-size: 8pt; }
+    table { width: 100%; border-collapse: collapse; margin: 5pt 0 8pt; font-size: 7.8pt; }
+    th, td { border: 1px solid #decbb8; padding: 4pt 5pt; text-align: left; vertical-align: top; }
+    th { background: #ffdbbb; }
+    .tree { margin: 5pt 0 8pt; border: 1px solid #decbb8; padding: 7pt; background: #fffaf6; font: 7.1pt/1.25 "Courier New", monospace; white-space: pre-wrap; }
+    .decisions { display: flex; flex-direction: column; gap: 5pt; }
+    .decision { border-left: 3px solid #ed3b2f; padding: 4pt 7pt; }
+    .decision p { margin: 0; }
+    .placeholder { margin: 5pt 0 8pt; border: 1px dashed #ed3b2f; padding: 7pt; background: #fffaf6; }
+    .placeholder p:last-child { margin-bottom: 0; }
+    .small { color: #756653; font-size: 7.5pt; }
+    .page-number { position: absolute; right: 0; bottom: 0; color: #756653; font-size: 7pt; }
+    .capture-title { margin-bottom: 7pt; }
+    .capture-gallery { display: flex; flex-wrap: wrap; align-content: space-between; justify-content: space-between; gap: 2mm 4mm; height: 250mm; }
+    .capture-card { display: flex; flex: 0 0 48%; flex-direction: column; align-items: center; justify-content: flex-start; gap: 2mm; margin: 0; }
+    .capture-card img { display: block; height: 112mm; width: auto; max-width: 100%; object-fit: contain; border: 1px solid #decbb8; }
+    .capture-card figcaption { color: #4d3517; font-size: 8pt; font-weight: bold; text-align: center; }
+    .note { margin-top: 3pt; color: #756653; font-size: 7.5pt; }
+  </style>
+</head>
+<body>
+  <section class="page">
+    <p class="coverline">Desafio 1 · O mesmo esqueleto, outro negócio</p>
+    <h1>Troca de Livros</h1>
+    <p class="subtitle">Relatório de construção do aplicativo · Tema escolhido pelo grupo</p>
+    <div class="name-line"><strong</strong> Corsaty Souza &nbsp; |
+      
+    <section class="section">
+      <h2>R1 · O problema e quem usa</h2>
+      <p>O aplicativo responde à pergunta: <strong>“Onde encontro o livro que preciso, em bom estado e com uma troca que vale a pena?”</strong> Ele aproxima quem procura um livro de quem tem um exemplar parado, mostrando assunto, conservação, proposta de troca e local de encontro.</p>
+      <div class="scenarios">
+        <article class="scenario"><h3>1. Procurar para uma disciplina</h3><p>Uma pessoa pesquisa título ou matéria, filtra os resultados e confere conservação e local antes de combinar a troca.</p></article>
+        <article class="scenario"><h3>2. Comparar propostas</h3><p>Quem já leu um romance publica o exemplar e informa que tipo de livro aceitaria em troca.</p></article>
+        <article class="scenario"><h3>3. Explorar por categoria</h3><p>Uma visitante abre uma categoria, compara livros e consulta quem publicou cada anúncio.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>R2 · Mapa de equivalência</h2>
+      <table>
+        <thead><tr><th>No KiOferta</th><th>No Troca de Livros</th><th>Como aparece no aplicativo</th></tr></thead>
+        <tbody>
+          <tr><td>Produto</td><td>Livro procurado</td><td>Título, autor, matéria e categoria.</td></tr>
+          <tr><td>Oferta</td><td>Anúncio de um exemplar</td><td>Livro disponível, com estado e proposta de troca.</td></tr>
+          <tr><td>Mercado</td><td>Publicador e ponto de encontro</td><td>Quem anuncia, campus/cidade e local combinado.</td></tr>
+          <tr><td>Preço</td><td>Condição e proposta de troca</td><td>Conservação do exemplar e o que a pessoa aceita receber.</td></tr>
+          <tr><td>Distância</td><td>Local de encontro</td><td>Campus, cidade ou ponto informado no anúncio.</td></tr>
+          <tr><td>Contribuinte</td><td>Publicador</td><td>Usuário mockado responsável pelo anúncio.</td></tr>
+          <tr><td>Visitante</td><td>Leitor que consulta</td><td>Pessoa que pesquisa sem fazer login.</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <span class="page-number">1 / 5</span>
+  </section>
+
+  <section class="page">
+    <p class="coverline">Construção</p>
+    <section>
+      <h2>R3 · A estrutura</h2>
+      <pre class="tree">src/
+├── index.html
+├── css/
+│   ├── tokens.css, base.css, style.css
+│   ├── navbar/navbar.css
+│   ├── componentes/cartaoLivro.css
+│   └── paginas/ (um CSS por tela)
+└── js/
+    ├── main.js
+    ├── rotas/rotas.js
+    ├── navbar/navbar.js
+    ├── dadosMockados/ (livros, publicadores, usuarios)
+    ├── componentes/cartaoLivro.js
+    └── paginas/ (seis módulos de tela)</pre>
+      <table>
+        <tbody>
+          <tr><th>Arquivos</th><th>Papel</th></tr>
+          <tr><td>main.js / rotas.js</td><td>Escutam hashchange, localizam rota e entregam parâmetros à tela; a lista única descreve todas as páginas.</td></tr>
+          <tr><td>navbar.js</td><td>Gera o menu a partir das rotas com label preenchido.</td></tr>
+          <tr><td>dadosMockados/</td><td>Fornece 12 anúncios, 4 publicadores e 5 usuários de demonstração.</td></tr>
+          <tr><td>paginas/ e CSS</td><td>Separaram as seis telas e seus estilos; cartaoLivro.js reutiliza o cartão nos resultados e na conta.</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="section">
+      <h2>R4 · Três decisões e uma alternativa descartada</h2>
+      <div class="decisions">
+        <div class="decision"><h3>1. Partir do KiOferta</h3><p>Foram preservados o shell de página única, o roteador por hash, o menu gerado pelas rotas e a separação em módulos, reorganizando apenas os caminhos exigidos pelo enunciado.</p></div>
+        <div class="decision"><h3>2. Usar parâmetros no endereço</h3><p>Busca, categoria e ID de detalhe viajam no hash. Assim, o roteador identifica a tela e o F5 abre o mesmo endereço com seus parâmetros.</p></div>
+        <div class="decision"><h3>3. Mostrar os critérios de troca</h3><p>Estado do livro, proposta e ponto de encontro ficam visíveis nos cartões e no detalhe; busca por texto e categoria podem ser combinadas.</p></div>
+        <div class="decision"><h3>Alternativa descartada: chat e backend</h3><p>Um chat facilitaria a negociação, mas exigiria serviços e persistência fora do escopo: esta atividade usa dados mockados e não exige backend nem login real.</p></div>
+      </div>
+      <p class="note">Revisar estas decisões com o grupo para refletir o processo efetivamente apresentado por vocês.</p>
+    </section>
+    <span class="page-number">2 / 5</span>
+  </section>
+
+  <section class="page">
+    <p class="coverline">Registro do grupo</p>
+    <section>
+      <h2>R5 · A divisão de tarefas</h2>
+      <p>Preencher com a divisão real e com números conferidos em <code>git log</code>. Corsaty Souza é o único integrante informado até agora.</p>
+      <table>
+        <thead><tr><th>Integrante</th><th>Responsabilidade/entregáveis reais</th><th>Commits</th></tr></thead>
+        <tbody>
+          <tr><td>Corsaty Souza</td><td>[Preencher de acordo com o trabalho realizado]</td><td>[Hashes reais]</td></tr>
+          <tr><td>[Integrante 2]</td><td>[Preencher de acordo com o trabalho realizado]</td><td>[Hashes reais]</td></tr>
+          <tr><td>[Integrante 3]</td><td>[Preencher de acordo com o trabalho realizado]</td><td>[Hashes reais]</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="section">
+      <h2>R6 · Duas dificuldades reais</h2>
+      <div class="placeholder">
+        <p><strong>Dificuldade 1 — completar pelo grupo:</strong> erro que apareceu: [descrever]; o que pensávamos que era: [descrever]; o que era de fato: [descrever].</p>
+      </div>
+      <div class="placeholder">
+        <p><strong>Dificuldade 2 — completar pelo grupo:</strong> erro que apareceu: [descrever]; o que pensávamos que era: [descrever]; o que era de fato: [descrever].</p>
+      </div>
+      <p class="small">Os campos permanecem em aberto porque dificuldades e causas precisam corresponder a erros que realmente aconteceram durante o trabalho do grupo.</p>
+    </section>
+    <section class="section">
+      <h2>R7 · O que ficou de fora</h2>
+      <p>O protótipo não tem backend, banco de dados, login real, chat, envio de fotos, negociação confirmada ou persistência após F5. Os dados são mockados em JavaScript e novos anúncios vivem apenas na memória da sessão. Essas lacunas foram mantidas explícitas para respeitar o escopo didático, em vez de simular serviços que o app não possui.</p>
+      <p>Antes da entrega, completar R5 e R6, inserir os outros nomes e validar R4 com o grupo.</p>
+    </section>
+    <span class="page-number">3 / 5</span>
+  </section>
+
+  <section class="page">
+    <p class="coverline">Capturas · viewport de 360px</p>
+    <h2 class="capture-title">Telas 1–4</h2>
+    <div class="capture-gallery">
+      <figure class="capture-card"><img src="capturas/01-inicio.png" alt="Tela Início" /><figcaption>1 · Início</figcaption></figure>
+      <figure class="capture-card"><img src="capturas/02-resultados.png" alt="Tela Resultados" /><figcaption>2 · Resultados</figcaption></figure>
+      <figure class="capture-card"><img src="capturas/03-detalhe.png" alt="Tela Detalhe" /><figcaption>3 · Detalhe</figcaption></figure>
+      <figure class="capture-card"><img src="capturas/04-publicar.png" alt="Tela Publicar" /><figcaption>4 · Publicar</figcaption></figure>
+    </div>
+    <span class="page-number">4 / 5</span>
+  </section>
+
+  <section class="page">
+    <p class="coverline">Capturas · viewport de 360px</p>
+    <h2 class="capture-title">Tela 5 e estados adicionais</h2>
+    <div class="capture-gallery">
+      <figure class="capture-card"><img src="capturas/05-minha-conta.png" alt="Tela Minha conta" /><figcaption>5 · Minha conta</figcaption></figure>
+      <figure class="capture-card"><img src="capturas/06-rota-inexistente.png" alt="Tela de rota inexistente" /><figcaption>6 · Rota inexistente</figcaption></figure>
+      <figure class="capture-card"><img src="capturas/07-busca-vazia.png" alt="Busca sem resultados" /><figcaption>Estado vazio da busca</figcaption></figure>
+      <figure class="capture-card"><img src="capturas/08-conta-vazia.png" alt="Conta sem publicações" /><figcaption>Estado vazio da conta (extra)</figcaption></figure>
+    </div>
+    <span class="page-number">5 / 5</span>
+  </section>
+</body>
+</html>

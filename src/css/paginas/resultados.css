@@ -1,0 +1,37 @@
+.results-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.results-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 0.5rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: 4px;
+  padding: 0.65rem;
+  background: var(--cor-superficie);
+}
+
+.results-filters .form-field {
+  flex: 1 1 9rem;
+}
+
+.results-list-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.results-list-heading p,
+.results-summary {
+  margin: 0;
+  color: var(--cor-texto-suave);
+  font-size: 0.9rem;
+}
